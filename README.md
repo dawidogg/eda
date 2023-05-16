@@ -27,7 +27,7 @@ My aim in this project is to learn microcontroller programming, and learning mob
 
 # Examples
 Startup screen, when the power is switched on (or when there is a runtime error and the device reboots, yikes):
-https://github.com/dawidogg/eda/assets/39916800/6e3b9538-dd47-426c-be24-bbf1a201cbcd
+<video src="https://github.com/dawidogg/eda/assets/39916800/6e3b9538-dd47-426c-be24-bbf1a201cbcd"></video>
 
 Bluetooth connection. The user can interact with the device using only one action, that is tilting it. To confirm a pairing request, one should tilt the device, and to reject, one should keep the device still for 7 seconds.
 https://github.com/dawidogg/eda/assets/39916800/65f7c5a8-1f81-41d5-8387-c9f4f783f10c

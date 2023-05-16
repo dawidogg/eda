@@ -12,7 +12,8 @@ I am planning on drawing an explicit schematic later on when designing a PCB. In
 - 74HC595N serial-in, parallel-out 8-bit shift register, with five pink LEDs attached to the outputs Q1-Q5 (3 pins);
 - N-channel MOSFET which triggers a mini vibration motor (1 pin);
 - Mercury tilt sensor with the other end connected to the ground (1 pin);
-- Buzzer (1 pin);
+- Buzzer (1 pin).
+
 The circuit is powered by a rechargeable 3.7 V battery, and there is a charging module on the breadboard with a Type-C input.
 
 # Microcontroller program

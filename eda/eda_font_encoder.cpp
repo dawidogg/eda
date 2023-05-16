@@ -1,8 +1,8 @@
 /* ESPRESSIF DISTANT ALARM                                                      *
  * by Denis Davidoglu, 2023                                                     *
  *                                                                              *
- * Module for mapping regular characters to a 127-symbol set. Adafruit_GFX      *
- * library supports custom fonts with only 127 glyphs. To include Turkish and   *
+ * Module for mapping regular characters to a 128-symbol set. Adafruit_GFX      *
+ * library supports custom fonts with only 128 glyphs. To include Turkish and   *
  * Russian letters, I deleted lowercase English letters and some other symbols. */
 
 #include "include/eda_font_encoder.h"

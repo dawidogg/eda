@@ -1,3 +1,6 @@
+/* ESPRESSIF DISTANT ALARM                                                      *
+ * by Denis Davidoglu, 2023                                                     */
+
 #include <Arduino.h>
 
 #ifndef EDA_FONT_ENCODER

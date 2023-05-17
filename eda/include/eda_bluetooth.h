@@ -1,3 +1,6 @@
+/* ESPRESSIF DISTANT ALARM                                                      *
+ * by Denis Davidoglu, 2023                                                     */
+
 #include "eda_pin_definitions.h"
 #include <Arduino.h>
 #include <BluetoothSerial.h>

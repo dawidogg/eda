@@ -1,3 +1,8 @@
+/* ESPRESSIF DISTANT ALARM                                                      *
+ * by Denis Davidoglu, 2023                                                     *
+ * 										*
+ * Generated with bdf2adafruit.py converter.					*/
+
 #include <Adafruit_GFX.h>
 
 #ifndef EDA_FONT

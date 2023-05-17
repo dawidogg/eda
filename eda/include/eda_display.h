@@ -1,3 +1,6 @@
+/* ESPRESSIF DISTANT ALARM                                                      *
+ * by Denis Davidoglu, 2023                                                     */
+
 #include "eda_pin_definitions.h"
 #include "eda_font.h"
 #include "eda_font_encoder.h"

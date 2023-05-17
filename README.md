@@ -1,10 +1,12 @@
 # Espressif Distant Alarm
 This project is a fun experiment on multitasking using FreeRTOS, Bluetooth communication, string processing, simple pixel graphics, bitmap fonts, as well as the basic electronics involved. The core of the system is the Espressif ESP32 system on a chip microcontroller, whose function is to get push notification data from a smartphone via Bluetooth. With a display, buzzer, mini vibration motor, and pink LEDs, getting messages from special people becomes even more joyful. 
-![breadboard](https://github.com/dawidogg/eda/assets/39916800/89cb7d79-562a-459c-aa0a-fa71b13d7024)
+
+![breadboard](https://github.com/dawidogg/eda/assets/39916800/80e6afb2-4fed-47ba-98d6-d59b5ca6c881)
 
 # Inspiration
 I always liked these round little pagers given in restaurants, which ring as soon as the order is done. The tunes they play, the flashes, the vibration, really bring the moment of gratification. Instead of stealing one, I decided I can make my own with the functions I want, that is announcing immediately if someone important has texted. The idea for Espressif Distant Alarm came to me long before I knew what a microcontroller was.
-![pagers](https://github.com/dawidogg/eda/assets/39916800/614dd135-7bec-4381-b1b5-8fd747c0954a)
+
+![pagers](https://github.com/dawidogg/eda/assets/39916800/f683ad8b-22c1-4b48-888b-d7a5b57edd86)
 
 # Circuit
 I am planning on drawing an explicit schematic later on when designing a PCB. In general, the circuit is simple, there are just some parts attached to the microcontroller:
@@ -15,6 +17,8 @@ I am planning on drawing an explicit schematic later on when designing a PCB. In
 - Buzzer (1 pin).
 
 The circuit is powered by a rechargeable 3.7 V battery, and there is a charging module on the breadboard with a Type-C input.
+
+![tilt_sensor](https://github.com/dawidogg/eda/assets/39916800/8f6a1989-4841-4486-8164-e79be0bdae41)
 
 # Microcontroller program
 To be able to use Bluetooth and Adafruit display libraries, I decided to go with the Arduino platform instead of the native to my microcontroller ESP-IDF. Another library, or a whole operating system I used is FreeRTOS, which enabled me to create parallel tasks. The main file initializes modules and has crucial functions to respond to the inputs and interface with other components. There are separate tasks for display, buzzer with motor, and LEDs, which work synchronously. The display module must print text and constantly animate lines, without blocking or interrupting the buzzer tune or other things. Bluetooth module has its task too, and it sends interrupts to the main when data is coming. Communication between tasks was not done with the rich tools an RTOS can offer, such as queues, semaphores, mutexes, etc. I used only task notify functions (specific to FreeRTOS, alternative for binary semaphores) and global variables for this. 
@@ -28,13 +32,13 @@ My aim in this project is to learn microcontroller programming, and learning mob
 
 # Examples
 Startup screen, when the power is switched on (or when there is a runtime error and the device reboots, yikes).
-https://github.com/dawidogg/eda/assets/39916800/6e3b9538-dd47-426c-be24-bbf1a201cbcd
+https://github.com/dawidogg/eda/assets/39916800/97db8527-ac35-47ed-ad66-9c5c23692ca7
 
 Bluetooth connection. The user can interact with the device using only one action, that is tilting it. To confirm a pairing request, one should tilt the device, and to reject, one should keep the device still for 7 seconds.
-https://github.com/dawidogg/eda/assets/39916800/65f7c5a8-1f81-41d5-8387-c9f4f783f10c
+https://github.com/dawidogg/eda/assets/39916800/230f6726-7d69-4040-ba32-848713a8d4e8
 
 Incoming message. To shut down the alarm, a tilt is enough.
-https://github.com/dawidogg/eda/assets/39916800/26615b7e-c18d-4f91-a189-f911829ffe18
+https://github.com/dawidogg/eda/assets/39916800/8de41b75-5a81-4028-b060-978a8a8a5eaf
 
 # Contribution
 This project lacks PCB design, 3D enclosure design, and mobile application, and therefore open to your contribution. Contact me if you want to work together on the remaining parts.  
